@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #eff5f5;
+    font-family: 'Poppins';
+    margin: 0;
+}
+
+header {
+    /* height: 200px; */
+    background: linear-gradient(rgb(49 49 49 / 28%), rgb(0 0 0 / 75%)),
+        url('../images/portada.jpg') no-repeat center bottom;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 2em;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #eff5f5;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+
+}
+
+/* nav {
+
+} */
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    background-color: #181823;
+}
+
+ul {
+    list-style: none;
+    padding-inline: 0;
+    text-align: center;
+}
+
+.navItem {
+    /* display: block; */
+    color: #eff5f5;
+}
+
+.navItem:hover {
+    /* text-decoration: none; */
+    color: #181823;
+    background-color: #eff5f5;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* main {
+
+} */
+
+h2 {
+    padding-inline: 0.3em;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+footer {
+    background-color: #1f8a70;
+    padding: 0%;
+}
+
+footer a, footer li, footer h2 {
+    color: #eff5f5;
+}
+
+footer li img{
+    block-size: 1em;
+}
+
+.prueba div {
+    height: 100px;
+    width: 100px;
+}
+
+.prueba{
+    display: flex;
+}
+
+.uno{
+    background-color: #fc7300;
+}
+
+.dos{
+    background-color: #1f8a70;
+}
+
+.tres{
+    background-color: #00425a;
+}
+
+.cuatro{
+    background-color: #181823;
+}
+
+.cinco{
+    background-color: #eff5f5;
+}
+
+
+
+@media screen and (min-width: 660px){
+    h1 {
+        font-size: 4em;
+    }
+
+    .navigation {
+        flex-direction: row;
+        font-weight: bolder;
+        justify-content: space-around;
+
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    ul {
+        text-align: revert;
+    }
+
+}
+
+@media screen and (min-width: 1000px){
+    .navItem {
+        font-size: 1.2em;
+        padding-inline: 1em;
+    }
+
+
+}
