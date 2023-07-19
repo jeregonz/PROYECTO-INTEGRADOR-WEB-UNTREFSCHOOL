@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio oficial de UntrefSchool">
+    <meta name="author" content="Jeremias Gonzalez">
     <link rel="stylesheet" href="css/untref.css">
     <title>UntrefSchool - Contacto</title>
     <link rel="icon" type="image/png" href="images/logo.png">
@@ -16,16 +18,16 @@
         <nav>
             <ul class="navigation">
                 <li>
-                    <a href="#quienes-somos"  class="navItem">Quiénes Somos</a>
+                    <a href="index.html#quienes-somos"  class="navItem">Quiénes Somos</a>
                 </li>
                 <li >
-                    <a href="#por-que-elegirnos"  class="navItem">¿Por Qué Elegirnos?</a>
+                    <a href="index.html#por-que-elegirnos"  class="navItem">¿Por Qué Elegirnos?</a>
                 </li>
                 <li>
-                    <a href="#propuesta-educativa"  class="navItem">Propuesta Educativa</a>
+                    <a href="index.html#propuesta-educativa"  class="navItem">Propuesta Educativa</a>
                 </li>
                 <li>
-                    <a href="#ultimas-noticias"  class="navItem">Últimas Noticias</a>
+                    <a href="index.html#ultimas-noticias"  class="navItem">Últimas Noticias</a>
                 </li>
                 <li>
                     <a href="contacto.html"  class="navItem">Contacto</a>
@@ -34,7 +36,19 @@
         </nav>
     </header>
     <main>
-
+        <form >
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    
 
     </main>
     <footer>

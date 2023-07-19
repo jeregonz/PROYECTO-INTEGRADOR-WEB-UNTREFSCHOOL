@@ -1,7 +1,9 @@
-@font-face {
+/* @font-face {
     font-family: 'Poppins';
     src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
-}
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -11,6 +13,8 @@ body {
     background-color: #eff5f5;
     font-family: 'Poppins';
     margin: 0;
+    color: #181823;
+    text-align: center;
 }
 
 header {
@@ -18,19 +22,25 @@ header {
     background: linear-gradient(rgb(49 49 49 / 28%), rgb(0 0 0 / 75%)),
         url('../images/portada.jpg') no-repeat center bottom;
     background-size: cover;
+    padding-bottom: 0.1%;
 }
 
 h1 {
-    text-align: center;
-    margin-top: 0;
+    font-family: 'Belanosima';
+    /* text-align: center; */
+    /* margin-top: 0; */
     font-size: 2em;
+    margin-block: 2%;
 }
 
 h1 a {
     text-decoration: none;
     color: #eff5f5;
     text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
 
+h1 a:hover {
+    color: #fc7300;
 }
 
 /* nav {
@@ -38,15 +48,21 @@ h1 a {
 } */
 
 .navigation {
-    display: flex;
-    flex-direction: column;
-    background-color: #181823;
+    /* display: flex;
+    flex-direction: column; */
+    background-color: #00425a;
+    margin-block: 0;
 }
 
 ul {
     list-style: none;
     padding-inline: 0;
-    text-align: center;
+    /* text-align: center; */
+}
+
+.navigation li {
+    /* min-height: 2.5em; */
+    padding-block: 1%;
 }
 
 .navItem {
@@ -57,7 +73,9 @@ ul {
 .navItem:hover {
     /* text-decoration: none; */
     color: #181823;
-    background-color: #eff5f5;
+    color: #fc7300;
+    /* color: #00425a; */
+    /* background-color: #fc7300; */
 }
 
 a {
@@ -69,17 +87,27 @@ a {
 } */
 
 h2 {
+    font-family: 'Belanosima';
     padding-inline: 0.3em;
-    text-align: center;
+    /* text-align: center; */
+    margin-bottom: 0.3em;
 }
 
-p {
+/* p {
     text-align: center;
+} */
+
+.seccion-quienes-somos {
+    display: flex;
+}
+
+.seccion-elegirnos {
+    display: flex;
 }
 
 footer {
     background-color: #1f8a70;
-    padding: 0%;
+    /* padding: 0%; */
 }
 
 footer a, footer li, footer h2 {
@@ -90,57 +118,75 @@ footer li img{
     block-size: 1em;
 }
 
-.prueba div {
-    height: 100px;
-    width: 100px;
+.redes a:hover {
+    color: #fc7300;
+    font-weight: bold;
 }
 
-.prueba{
-    display: flex;
+/* .seccion-mapa{
+    text-align: center;
+} */
+
+.mapa {
+    border: 0;
+    width: 235px;
+    height: 200px;
 }
 
-.uno{
-    background-color: #fc7300;
+a {
+  text-decoration: none;
+  position: relative;
 }
 
-.dos{
-    background-color: #1f8a70;
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fc7300;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
 }
 
-.tres{
-    background-color: #00425a;
-}
-
-.cuatro{
-    background-color: #181823;
-}
-
-.cinco{
-    background-color: #eff5f5;
+a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 
-
-@media screen and (min-width: 660px){
+@media screen and (min-width: 700px){
     h1 {
         font-size: 4em;
     }
 
     .navigation {
+        display: flex;
         flex-direction: row;
         font-weight: bolder;
         justify-content: space-around;
-
+        /* display: grid; */
+        /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        justify-items: center; */
     }
 
     footer {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        /* display: flex;
+        justify-content: space-around; */
+        /* align-items: center; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
     }
 
     ul {
         text-align: revert;
+    }
+
+    .info-contacto {
+        text-align: right;
     }
 
 }
@@ -148,8 +194,11 @@ footer li img{
 @media screen and (min-width: 1000px){
     .navItem {
         font-size: 1.2em;
-        padding-inline: 1em;
+        /* padding-inline: 1em; */
     }
 
+    .mapa {
+        width: 500px;
+    }
 
 }
