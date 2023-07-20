@@ -44,7 +44,11 @@ h1 a:hover {
 }
 
 /* nav {
+    display: none;
+}
 
+nav.show {
+    display: block;
 } */
 
 .navigation {
@@ -97,12 +101,58 @@ h2 {
     text-align: center;
 } */
 
+section {
+    padding-inline: 1.5%;
+}
+
 .seccion-quienes-somos {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .seccion-elegirnos {
     display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.noticias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noticia {
+    padding-inline: 0.5%;
+    border: solid #181823;
+    margin: 0.5%;
+    height: 100%;
+}
+
+.noticia p {
+    margin: 0.5%;
+}
+
+h3 {
+    margin: 0;
+}
+
+.propuestas {
+    display: grid;
+    grid-template-areas:
+        "figure figure"
+        "figure figure";
+}
+
+.propuesta {
+    width: 45%;
+}
+
+.propuesta img {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 footer {
@@ -133,6 +183,10 @@ footer li img{
     height: 200px;
 }
 
+.info-contacto {
+    margin-bottom: 0;
+}
+
 a {
   text-decoration: none;
   position: relative;
@@ -156,6 +210,29 @@ a:hover::after {
   transform: scaleX(1);
 }
 
+.seccion-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario {
+    border-radius: 20px;
+    border-style: solid;
+    font-weight: bolder;
+    background-color: white;
+    margin-block: 3em;
+    padding-bottom: 1em;
+    padding-inline: 1.5em;
+    box-shadow: 0px 0px 0.5em 1em #ffffffa8;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 @media screen and (min-width: 700px){
     h1 {
@@ -170,6 +247,27 @@ a:hover::after {
         /* display: grid; */
         /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         justify-items: center; */
+    }
+
+    .seccion-quienes-somos {
+        flex-direction: row;
+    }
+
+    .seccion-elegirnos {
+        flex-direction: row;
+    }
+
+    .propuestas {
+        grid-template-areas: "figure figure figure figure";
+    }
+
+    .noticias {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .noticia {
+        width: 45%;
     }
 
     footer {
