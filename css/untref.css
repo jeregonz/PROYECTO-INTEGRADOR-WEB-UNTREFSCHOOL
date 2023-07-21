@@ -253,17 +253,36 @@ a:hover::after {
     border-radius: 20px;
     border-style: solid;
     font-weight: bolder;
-    background-color: white;
+    background-color: #00425a;
     margin-block: 3em;
     padding-bottom: 1em;
     padding-inline: 1.5em;
-    box-shadow: 0px 0px 0.5em 1em #ffffffa8;
+}
+
+.formulario h2 {
+    color: #eff5f5;
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+form label {
+    color: #eff5f5;
+    font-weight: bold;
+}
+
+form button {
+    font-family: 'Poppins';
+    margin-top: 2%;
+    font-weight: bold;
+    background-color: #1f8a70;
+    border-radius: 36%;
+    height: 3em;
+    border: solid 1px #eff5f5;
+    color: #eff5f5;
 }
 
 
@@ -338,6 +357,9 @@ form {
         text-align: right;
     }
 
+    .formulario {
+        box-shadow: 0px 0px 0.5em 1em #181823;
+    }
 }
 
 @media screen and (min-width: 1000px){
