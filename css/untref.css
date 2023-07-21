@@ -46,7 +46,7 @@ h1 a:hover {
 nav {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1s;
+    transition: max-height 0.8s;
 }
 
 nav.show {
@@ -86,7 +86,7 @@ ul {
 }
 
 #btnMenu{
-    height: 32px;
+    height: 45px;
     border-radius: 20%;
     border: 0;
     position: absolute;
@@ -96,7 +96,7 @@ ul {
 }
 
 #btnMenu img {
-    height: 32px;
+    height: 100%;
     border-radius: 20%;
     border-color: black;
     border: solid 1px;
@@ -127,7 +127,7 @@ h2 {
 } */
 
 section {
-    padding-inline: 1.5%;
+    padding: 1.5%;
 }
 
 .seccion-quienes-somos {
@@ -163,6 +163,10 @@ h3 {
     margin: 0;
 }
 
+#propuesta-educativa {
+    padding-bottom: 5%;
+}
+
 .propuestas {
     display: grid;
     grid-template-areas:
@@ -175,9 +179,13 @@ h3 {
 }
 
 .propuesta img {
-    width: 100%;
-    height: 100%;
+    width: 85px;
+    /* height: 100%; */
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+#ultimas-noticias, #propuesta-educativa, #por-que-elegirnos {
+    border-top: solid 1px #181823;
 }
 
 footer {
@@ -283,6 +291,10 @@ form {
         display: none;
     }
 
+    h2 {
+        font-size: 2em;
+    }
+
     .seccion-quienes-somos {
         flex-direction: row;
     }
@@ -293,6 +305,11 @@ form {
 
     .propuestas {
         grid-template-areas: "figure figure figure figure";
+    }
+
+    .propuesta img {
+        width: 100px;
+        height: 100px;
     }
 
     .noticias {
