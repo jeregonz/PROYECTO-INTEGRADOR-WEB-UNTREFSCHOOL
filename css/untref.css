@@ -43,13 +43,16 @@ h1 a:hover {
     color: #fc7300;
 }
 
-/* nav {
-    display: none;
+nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
 }
 
 nav.show {
     display: block;
-} */
+    max-height: 500px;
+}
 
 .navigation {
     /* display: flex;
@@ -80,6 +83,28 @@ ul {
     color: #fc7300;
     /* color: #00425a; */
     /* background-color: #fc7300; */
+}
+
+#btnMenu{
+    height: 32px;
+    border-radius: 20%;
+    border: 0;
+    position: absolute;
+    padding: 0px;
+    left: 1%;
+    background-color: #00425a;
+}
+
+#btnMenu img {
+    height: 32px;
+    border-radius: 20%;
+    border-color: black;
+    border: solid 1px;
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
 }
 
 a {
@@ -239,6 +264,11 @@ form {
         font-size: 4em;
     }
 
+    nav {
+        overflow: visible;
+        max-height: max-content;
+    }
+
     .navigation {
         display: flex;
         flex-direction: row;
@@ -247,6 +277,10 @@ form {
         /* display: grid; */
         /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         justify-items: center; */
+    }
+
+    #btnMenu {
+        display: none;
     }
 
     .seccion-quienes-somos {
